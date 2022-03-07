@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { createContext, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './page/Home/Home/Home';
+import Footer from './page/shear/Footer/Footer';
+import HeaderNav from './page/shear/HeaderNav/HeaderNav';
+import { darkTheme, GlobalStyles, lightTheme } from './theme/theme';
+
+export const ThemeContextProvider = createContext()
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContextProvider.Provider value={[isDarkTheme, setIsDarkTheme]}>
+      <GlobalStyles theme={isDarkTheme ? darkTheme : lightTheme} />
+      <HeaderNav/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+      </Routes>
+      <Footer/>
+    </ThemeContextProvider.Provider>
+
   );
 }
 
