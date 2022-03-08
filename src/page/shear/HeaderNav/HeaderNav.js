@@ -1,9 +1,10 @@
-import { faMoon, faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faLightbulb, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeContextProvider } from '../../../App';
+import resumePdf from '../../../images/pdf/resume.pdf'
 
 
 const HeaderNav = () => {
@@ -17,11 +18,11 @@ const HeaderNav = () => {
     }
     const onMouseOutHandler = (e) => {
         e.target.style.background = "none";
-        e.target.style.color =  isDarkTheme ? '#dbdbdb' : '#303030';
+        e.target.style.color = isDarkTheme ? '#dbdbdb' : '#303030';
     }
     const linkStyle = {
         width: "80px",
-        textDecoration: 'none', 
+        textDecoration: 'none',
         fontWeight: 'bold',
         color: isDarkTheme ? '#dbdbdb' : '#303030',
     }
@@ -35,14 +36,14 @@ const HeaderNav = () => {
                 >
                     mehedy-portfolio
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className={'bg-info'}/>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className={'bg-info'} />
                 <Navbar.Collapse id="basic-navbar-nav" className="">
                     <Nav className="ms-auto">
                         <Link
                             style={linkStyle}
                             onMouseOver={onMouseOverHandler}
                             onMouseOut={onMouseOutHandler}
-                            className={`btn m-1 ${path==="/" && "bg-info" }`}
+                            className={`btn m-1 ${path === "/" && "bg-info"}`}
                             to="/"
                         >
                             Home
@@ -51,16 +52,7 @@ const HeaderNav = () => {
                             style={linkStyle}
                             onMouseOver={onMouseOverHandler}
                             onMouseOut={onMouseOutHandler}
-                            className={`btn m-1 ${path==="/about" && "bg-info" }`}
-                            to="/about"
-                        >
-                            About
-                        </Link>
-                        <Link
-                            style={linkStyle}
-                            onMouseOver={onMouseOverHandler}
-                            onMouseOut={onMouseOutHandler}
-                            className={`btn m-1 ${path==="/project" && "bg-info" }`}
+                            className={`btn m-1 ${path === "/project" && "bg-info"}`}
                             to="/project"
                         >
                             Project
@@ -69,16 +61,7 @@ const HeaderNav = () => {
                             style={linkStyle}
                             onMouseOver={onMouseOverHandler}
                             onMouseOut={onMouseOutHandler}
-                            className={`btn m-1 ${path==="/resume" && "bg-info" }`}
-                            to="/resume"
-                        >
-                            Resume
-                        </Link>
-                        <Link
-                            style={linkStyle}
-                            onMouseOver={onMouseOverHandler}
-                            onMouseOut={onMouseOutHandler}
-                            className={`btn m-1 ${path==="/blog" && "bg-info" }`}
+                            className={`btn m-1 ${path === "/blog" && "bg-info"}`}
                             to="/blog"
                         >
                             Blog
@@ -87,15 +70,19 @@ const HeaderNav = () => {
                             style={linkStyle}
                             onMouseOver={onMouseOverHandler}
                             onMouseOut={onMouseOutHandler}
-                            className={`btn m-1 ${path==="/contact" && "bg-info" }`}
+                            className={`btn m-1 ${path === "/contact" && "bg-info"}`}
                             to="/contact"
                         >
                             Contact
                         </Link>
-                        
+                        <a
+                            style={{ width: '200px' }}
+                            className="btn fw-bold btn-outline-info m-1" href={resumePdf} download>
+                            <FontAwesomeIcon icon={faDownload} /> Download Resume
+                        </a>
                         <div>
-                            <h4
-                                style={{ width: '80px' }}
+                            <h4 
+                                style={{height: '40px', width: '40px', borderRadius: '50%'}}
                                 className={`btn m-1 ${isDarkTheme ? 'btn-light' : 'btn-dark'}`}
                                 onClick={() => setIsDarkTheme(!isDarkTheme)}
                             >
@@ -104,7 +91,6 @@ const HeaderNav = () => {
                                         <FontAwesomeIcon icon={faMoon} />
                                         :
                                         <FontAwesomeIcon icon={faLightbulb} />
-
                                 }
                             </h4>
                         </div>
