@@ -4,7 +4,6 @@ import HomeHeader from '../HomeHeader/HomeHeader'
 import Skills from '../Skills/Skills';
 import Education from '../Education/Education';
 
-// #0dcaf0 
 const Home = () => {
     return (
         <div className="container">

@@ -8,7 +8,7 @@ const About = () => {
             <div className="text-center">
                 <img
                     data-aos="flip-up"
-                    data-aos-duration="1500"
+                    data-aos-duration="2500"
                     className="w-50"
                     src={aboutSvg} alt="" />
             </div>
