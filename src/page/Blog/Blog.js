@@ -7,7 +7,7 @@ import BlogDetails from './BlogDetails';
 const Blog = () => {
     const [blogsData, setBlogsData] = useState([]);
     useEffect(() => {
-        axios('http://localhost:5000/blogs')
+        axios('https://hidden-savannah-18290.herokuapp.com/blogs')
         .then(res => setBlogsData(res.data))
     },[])
     return (

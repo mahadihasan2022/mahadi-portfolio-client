@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const AddProject = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/project', data)
+        axios.post('https://hidden-savannah-18290.herokuapp.com/project', data)
         .then(res => {
             console.log(res?.data);
             if(res?.data?.insertedId){

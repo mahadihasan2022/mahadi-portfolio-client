@@ -7,7 +7,7 @@ import ProjectDetails from './ProjectDetails';
 const Project = () => {
     const [projectsData, setProjectsData] = useState([]);
     useEffect(() => {
-        axios('http://localhost:5000/projects')
+        axios('https://hidden-savannah-18290.herokuapp.com/projects')
         .then(res => setProjectsData(res.data))
     },[])
     return (
