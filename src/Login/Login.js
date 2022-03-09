@@ -11,7 +11,7 @@ firebaseInit();
 const Login = () => {
     const [admin, setAdmin] = useContext(AdminContext);
     const googleSignInHandler = () => {
-        if(window.confirm('Are you Sure you are owner This website?')){
+        if (window.confirm('Are you Sure you are owner This website?')) {
             const provider = new GoogleAuthProvider();
             const auth = getAuth();
             signInWithPopup(auth, provider)
@@ -25,7 +25,7 @@ const Login = () => {
                     console.log(error)
                 });
         }
-    
+
     }
     return (
         <div className="text-center container mt-5 mb-5 text-info">
@@ -39,9 +39,18 @@ const Login = () => {
                 <img className="w-50" src={loginSvg} alt="" />
             </div>
             <h2 style={{ color: 'gray' }}>Only Project Owners can Login</h2>
-            <button onClick={googleSignInHandler} className="btn btn-info mt-5 mb-5 form-control">
+            <button onClick={googleSignInHandler} className="btn btn-info rounded-pill mt-5 mb-5 form-control">
                 <FontAwesomeIcon icon={faGoogle} />oogle Sign In
             </button>
+
+            <div className="m-4">
+                <a className="btn btn-outline-info m-1" href="https://github.com/mdmehedyhassan/portfolio" target="_blank" rel="noopener noreferrer">
+                    Client site Code
+                </a>
+                <a className="btn btn-outline-info m-1" href="https://github.com/mdmehedyhassan/portfolio-server" target="_blank" rel="noopener noreferrer">
+                    Server site Code
+                </a>
+            </div>
         </div>
     );
 };
