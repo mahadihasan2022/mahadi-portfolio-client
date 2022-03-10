@@ -12,7 +12,7 @@ const Blog = () => {
                 if (res.status === 200) {
                     setBlogsData(res.data)
                 }
-                if (res.status !== 200) {
+                if (res.status === 404) {
                     window.location.reload();
                 }
             })

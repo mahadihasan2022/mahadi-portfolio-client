@@ -12,7 +12,7 @@ const Project = () => {
             if(res.status === 200){
                 setProjectsData(res.data)
             }
-            if(res.status !== 200){
+            if(res.status === 404){
                 window.location.reload();
             }
         })
