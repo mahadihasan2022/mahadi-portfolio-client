@@ -8,7 +8,14 @@ const Project = () => {
     const [projectsData, setProjectsData] = useState([]);
     useEffect(() => {
         axios('https://hidden-savannah-18290.herokuapp.com/projects')
-        .then(res => setProjectsData(res.data))
+        .then(res => {
+            if(res.status === 200){
+                setProjectsData(res.data)
+            }
+            if(res.status !== 200){
+                window.location.reload();
+            }
+        })
     },[])
     return (
         <div className="container mt-5 mb-5">

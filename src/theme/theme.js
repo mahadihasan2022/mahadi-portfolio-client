@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle `
     }
     .border-global-style{
         border-radius: 10px;
+        ont-family: 'Concert One', cursive;
         border: 2px solid ${props => props.theme.bodyText};
     }
     .border-global-style:hover{

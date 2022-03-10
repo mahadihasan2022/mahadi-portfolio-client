@@ -15,14 +15,14 @@ const HomeHeader = () => {
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
                 className="col-md-6 text-center text-md-start">
-                <h1>
+                <h1 style={{fontFamily: "'Concert One', cursive"}}>
                     Hello, I'm <br />
                     <span>
                         MD MEHEDY HASSAN
                     </span>
                 </h1>
 
-                <h1 style={{ fontWeight: 700, color: '#0dcaf0' }}>
+                <h1 style={{ fontWeight: 700, color: '#0dcaf0', fontFamily: " 'Pompiere', cursive"}}>
                     <Typewriter
                         options={{
                             strings: ['Frontend Developer...', 'Backend Developer...'],

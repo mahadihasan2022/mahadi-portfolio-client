@@ -8,8 +8,15 @@ const Blog = () => {
     const [blogsData, setBlogsData] = useState([]);
     useEffect(() => {
         axios('https://hidden-savannah-18290.herokuapp.com/blogs')
-        .then(res => setBlogsData(res.data))
-    },[])
+            .then(res => {
+                if (res.status === 200) {
+                    setBlogsData(res.data)
+                }
+                if (res.status !== 200) {
+                    window.location.reload();
+                }
+            })
+    }, [])
     return (
         <div className="container mt-5 mb-5">
             <h2 className="text-center pb-2 mt-5 border-bottom border-info border-5 text-info">My Articles</h2>

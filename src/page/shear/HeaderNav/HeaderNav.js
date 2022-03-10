@@ -32,7 +32,7 @@ const HeaderNav = () => {
             <Container>
                 <Navbar.Brand
                     href="/"
-                    className={`btn ${isDarkTheme ? 'text-light' : 'text-dark'}`}
+                    className={`btn text-info header-website-font`}
                 >
                     mehedy-portfolio
                 </Navbar.Brand>
@@ -81,8 +81,8 @@ const HeaderNav = () => {
                             <FontAwesomeIcon icon={faDownload} /> Download Resume
                         </a>
                         <div>
-                            <h4 
-                                style={{height: '40px', width: '40px', borderRadius: '50%'}}
+                            <h4
+                                style={{ height: '40px', width: '40px', borderRadius: '50%' }}
                                 className={`btn m-1 ${isDarkTheme ? 'btn-light' : 'btn-dark'}`}
                                 onClick={() => setIsDarkTheme(!isDarkTheme)}
                             >
