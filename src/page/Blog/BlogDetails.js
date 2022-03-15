@@ -9,7 +9,7 @@ const BlogDetails = (props) => {
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="3000"
-            className="col-lg-4 col-6"
+            className="col-lg-4 col-md-6"
         >
             <div
                 className="border-global-style p-2 m-2 mt-4 "
