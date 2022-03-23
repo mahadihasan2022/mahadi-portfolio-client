@@ -30,9 +30,17 @@ const AddProject = () => {
                 <textarea {...register("technology", { required: true })}  placeholder="Enter Technology" className="form-control"  />
                 {errors.technology && <span>Technology field is required</span>}
                 
+                <label className="mt-2" htmlFor="features">Features</label>
+                <textarea {...register("features", { required: true })}  placeholder="Enter Features" className="form-control"  />
+                {errors.features && <span>Features field is required</span>}
+               
                 <label className="mt-2" htmlFor="description">Description</label>
                 <textarea {...register("description", { required: true })}  placeholder="Enter Description" className="form-control"  />
                 {errors.description && <span>Description field is required</span>}
+               
+                <label className="mt-2" htmlFor="categories">Categories</label>
+                <input {...register("categories", { required: true })}  placeholder="Enter Categories" className="form-control"  />
+                {errors.categories && <span>Categories field is required</span>}
                
                 <label className="mt-2" htmlFor="liveSite">Live Site URL</label>
                 <input {...register("liveSite", { required: true })}  placeholder="Enter Live Site URL" className="form-control"  />

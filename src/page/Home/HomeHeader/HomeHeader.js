@@ -11,18 +11,15 @@ const HomeHeader = () => {
 
         <div className="row d-flex align-items-center mt-5 mb-5">
             <div
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
                 className="col-md-6 text-center text-md-start">
-                <h1 style={{fontFamily: "'Concert One', cursive"}}>
+                <h1 data-aos="fade-up" data-aos-duration="1000" style={{fontFamily: "'Concert One', cursive"}}>
                     Hello, I'm <br />
                     <span>
                         MD MEHEDY HASSAN
                     </span>
                 </h1>
 
-                <h1 style={{ fontWeight: 700, color: '#0dcaf0', fontFamily: " 'Pompiere', cursive"}}>
+                <h1 data-aos="fade-up" data-aos-duration="2000" style={{ fontWeight: 700, color: '#0dcaf0', fontFamily: " 'Pompiere', cursive"}}>
                     <Typewriter
                         options={{
                             strings: ['Frontend Developer...', 'Backend Developer...'],
@@ -31,8 +28,10 @@ const HomeHeader = () => {
                         }}
                     />
                 </h1>
+                <div data-aos="fade-up" data-aos-duration="2500">
                 <Available />
-                <a className="btn fw-bold btn-info" href={resumePdf} download>
+                </div>
+                <a data-aos="fade-up" data-aos-duration="3000" className="btn fw-bold btn-info" href={resumePdf} download>
                     <FontAwesomeIcon icon={faDownload} /> Download Resume
                 </a>
             </div>

@@ -10,7 +10,9 @@ const Project = () => {
         axios('https://hidden-savannah-18290.herokuapp.com/projects')
         .then(res => {
             if(res.status === 200){
-                setProjectsData(res.data)
+                let getAllProjects = []
+                res.data.map(project => getAllProjects = [project, ...getAllProjects])
+                setProjectsData(getAllProjects)
             }
             if(res.status === 404){
                 window.location.reload();

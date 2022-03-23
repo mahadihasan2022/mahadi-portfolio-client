@@ -27,4 +27,8 @@ export const GlobalStyles = createGlobalStyle `
         border: none;
         box-shadow: ${props => props.theme.boxShadow};
     }
+    .project-details-div{
+        background: ${props => props.theme.bodyBg};
+        color: ${props => props.theme.bodyText};
+    }
 `

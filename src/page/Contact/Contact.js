@@ -18,45 +18,33 @@ const Contact = () => {
                     <img className="w-100" src={contactSvg} alt="" />
                 </div>
                 <div
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="3000"
                     className="col-md-6">
                     <ContactForm />
                 </div>
             </div>
             <div className="row text-center">
                 <div
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000"
                     className="col-md-4">
                     <div className="border-global-style p-2 m-2 mt-4">
-                        <img className="w-100" src={phoneSvg} alt="" />
-                        <h3 className="text-info mt-3">Mobile Number</h3>
-                        <p>+880 1870 289 584</p>
+                        <img data-aos="zoom-in-up" data-aos-duration="1000" className="w-100" src={phoneSvg} alt="" />
+                        <h3 data-aos="fade-up" data-aos-duration="2000" className="text-info mt-3">Mobile Number</h3>
+                        <p data-aos="fade-up" data-aos-duration="3000">+880 1870 289 584</p>
                     </div>
                 </div>
                 <div
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2500"
                     className="col-md-4">
                     <div className="border-global-style p-2 m-2 mt-4">
-                        <img className="w-100" src={emailSvg} alt="" />
-                        <h3 className="text-info mt-3">Email Address</h3>
-                        <p>mdmehedyh55@gmail.com</p>
+                        <img data-aos="zoom-in-up" data-aos-duration="1000" className="w-100" src={emailSvg} alt="" />
+                        <h3 data-aos="fade-up" data-aos-duration="2000" className="text-info mt-3">Email Address</h3>
+                        <p data-aos="fade-up" data-aos-duration="3000">mdmehedyh55@gmail.com</p>
                     </div>
                 </div>
                 <div
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="3000"
                     className="col-md-4">
                     <div className="border-global-style p-2 m-2 mt-4">
-                        <img className="w-100" src={locationSvg} alt="" />
-                        <h3 className="text-info mt-3">Location</h3>
-                        <p>383/B, Khilgaon Taltola, Dhaka-1219</p>
+                        <img data-aos="zoom-in-up" data-aos-duration="1000" className="w-100" src={locationSvg} alt="" />
+                        <h3 data-aos="fade-up" data-aos-duration="2000" className="text-info mt-3">Location</h3>
+                        <p data-aos="fade-up" data-aos-duration="3000">383/B, Khilgaon Taltola, Dhaka-1219</p>
                     </div>
                 </div>
             </div>
